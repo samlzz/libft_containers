@@ -17,9 +17,9 @@ MD = mkdir -p
 AR = ar rcs
 
 C_FILES =	ft_dynbuf.c		\
-			ft_lst_edit.c	\
-			ft_lst_get.c	\
-			ft_lst_iter.c
+			linked_list/ft_lst_edit.c	\
+			linked_list/ft_lst_get.c	\
+			linked_list/ft_lst_iter.c
 #* Colors
 
 ESC = \033[
