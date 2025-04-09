@@ -6,7 +6,7 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:47:18 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/09 12:07:39 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/09 13:17:43 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_dynbuf
 	size_t	capacity;
 }	t_dynbuf;
 
-t_dynbuf	ft_dynbuf_new(int32_t *init_cap);
+t_dynbuf	ft_dynbuf_new(size_t *init_cap);
 
 char		*ft_dynbuf_append_str(t_dynbuf *buf, const char *s)
 			__attribute__ ((nonnull(1)));

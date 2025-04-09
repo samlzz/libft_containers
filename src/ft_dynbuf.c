@@ -6,14 +6,14 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 22:13:41 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/08 14:08:43 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/09 13:17:52 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_dynbuf.h"
 #include <stdlib.h>
 
-t_dynbuf	ft_dynbuf_new(int32_t *init_cap)
+t_dynbuf	ft_dynbuf_new(size_t *init_cap)
 {
 	t_dynbuf	buf;
 
