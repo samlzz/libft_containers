@@ -11,7 +11,7 @@ LIB_DIRS = $(LIBFT)
 LIB_FILES = ft
 
 CC = gcc
-CFLAGS := -Wall -Wextra -Werror -MMD
+CFLAGS := -Wall -Wextra -Werror -MMD -g
 RM = rm -f
 MD = mkdir -p
 AR = ar rcs
@@ -19,7 +19,10 @@ AR = ar rcs
 C_FILES =	ft_dynbuf.c		\
 			linked_list/ft_lst_edit.c	\
 			linked_list/ft_lst_get.c	\
-			linked_list/ft_lst_iter.c
+			linked_list/ft_lst_iter.c	\
+			hashmap/ft_hmap_iter.c	\
+			hashmap/ft_hmap.c		\
+			hashmap/utils.c			\
 #* Colors
 
 ESC = \033[
