@@ -6,7 +6,7 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 13:47:23 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/08 13:58:44 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/11 14:07:54 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void			ft_lstiter(t_list *lst, t_lst_f f)
 
 void			ft_lstiteri(t_list *lst, void (*f)(void *, size_t))
 				__attribute__ ((nonnull(2)));
-				
+
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), t_lst_f del)
 				__attribute__ ((warn_unused_result, nonnull(2)));
 
