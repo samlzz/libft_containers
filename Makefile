@@ -80,6 +80,8 @@ relib: dellib $(LIBFT)
 dellib:
 	$(call COLOR_PRINT,$(MAGENTA),$(LIBFT) cleaned !)
 	@$(RM) -r $(LIBFT)
+	@sed -i 's|^LIBFT *=.*|LIBFT = libft|' Makefile 2>/dev/null || true
+	@sed -i -E '/^LIB_FILES *=/ s/\bft\w*\b/ft/g' Makefile 2>/dev/null || true
 
 $(NAME): $(O_DIRS) $(OBJS)
 	@printf "$(GRAY)"
