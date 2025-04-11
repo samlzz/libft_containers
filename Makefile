@@ -20,9 +20,10 @@ C_FILES =	ft_dynbuf.c		\
 			linked_list/ft_lst_edit.c	\
 			linked_list/ft_lst_get.c	\
 			linked_list/ft_lst_iter.c	\
-			hashmap/ft_hmap_iter.c	\
-			hashmap/ft_hmap.c		\
-			hashmap/utils.c			\
+			hashmap/ft_hmap_iter.c			\
+			hashmap/ft_hmap_op.c			\
+			hashmap/ft_hmap.c				\
+			hashmap/private/ft_hmap_helpers.c
 #* Colors
 
 ESC = \033[

@@ -6,7 +6,7 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:18:20 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/09 16:34:34 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/11 13:32:24 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_hmap_entry
 	void	*val;
 }	t_hm_entry;
 
-typedef	struct s_hmap
+typedef struct s_hmap
 {
 	size_t		count;
 	t_hm_entry	*__entries;
@@ -43,20 +43,17 @@ typedef	struct s_hmap
 // Hmap
 t_hmap		ft_hmap_new(size_t *init_cap);
 void		ft_hmap_free(t_hmap *map, void (*del)(void *));
+
 int16_t		ft_hmap_set(t_hmap *map, const char *key, void *value, \
 			void (*del)(void *));
 void		*ft_hmap_get(t_hmap *map, const char *key);
 int16_t		ft_hmap_rm(t_hmap *map, const char *key, void (*del)(void *));
 
 // iter
-typedef	void (*t_hm_f) (char *, void *);
-typedef	void (*t_hmd_f) (t_hm_entry *, void *);
+typedef void	(*t_hm_f) (char *, void *);
+typedef void	(*t_hmd_f) (t_hm_entry *, void *);
 
 void		ft_hmap_iter(t_hmap *map, t_hm_f f);
 void		ft_hmap_iter_full(t_hmap *map, t_hmd_f func, void *data);
-
-// utils
-uint64_t	fnv1a_hash(const char *key);
-bool		hmap_should_resize(t_hmap map);
 
 #endif
