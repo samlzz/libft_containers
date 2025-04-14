@@ -16,14 +16,17 @@ RM = rm -f
 MD = mkdir -p
 AR = ar rcs
 
-C_FILES =	ft_dynbuf.c		\
+C_FILES =	dyn/ft_dynbuf.c				\
+			dyn/ft_dynint.c				\
+			dyn/private/generic_dyn.c	\
+			hashmap/ft_hmap_iter.c				\
+			hashmap/ft_hmap_op.c				\
+			hashmap/ft_hmap.c					\
+			hashmap/private/ft_hmap_helpers.c	\
 			linked_list/ft_lst_edit.c	\
 			linked_list/ft_lst_get.c	\
-			linked_list/ft_lst_iter.c	\
-			hashmap/ft_hmap_iter.c			\
-			hashmap/ft_hmap_op.c			\
-			hashmap/ft_hmap.c				\
-			hashmap/private/ft_hmap_helpers.c
+			linked_list/ft_lst_iter.c
+			
 #* Colors
 
 ESC = \033[
