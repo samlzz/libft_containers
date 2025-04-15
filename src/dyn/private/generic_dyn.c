@@ -6,7 +6,7 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 08:37:52 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/14 15:52:26 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/15 23:59:51 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,13 @@ int16_t	_dyn_resize(t_dyn *buf, size_t min_cap, size_t elem_nbytes)
 	size_t	new_cap;
 	void	*new_data;
 
-	if (min_cap >= SIZE_MAX - 16 || buf->cap >= SIZE_MAX / 2)
+	if (min_cap >= SIZE_MAX / elem_nbytes || buf->cap >= SIZE_MAX / 2)
 		return (0);
 	new_cap = buf->cap * DYN_REALOC_FACTOR;
 	while (new_cap < min_cap)
 		new_cap *= DYN_REALOC_FACTOR;
-	new_data = ft_realloc(buf->data, buf->len * elem_nbytes, new_cap);
+	new_data = ft_realloc(buf->data, \
+		buf->len * elem_nbytes, new_cap * elem_nbytes);
 	if (!new_data)
 		return (0);
 	buf->data = new_data;
