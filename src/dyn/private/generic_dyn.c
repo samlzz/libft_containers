@@ -6,7 +6,7 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/13 08:37:52 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/15 23:59:51 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/19 22:00:52 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int16_t	_dyn_resize(t_dyn *buf, size_t min_cap, size_t elem_nbytes)
 		buf->len * elem_nbytes, new_cap * elem_nbytes);
 	if (!new_data)
 		return (0);
+	free(buf->data);
 	buf->data = new_data;
 	buf->cap = new_cap;
 	return (1);
