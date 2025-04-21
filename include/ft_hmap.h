@@ -6,7 +6,7 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:18:20 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/11 13:32:24 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/21 17:43:38 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ typedef struct s_hmap
 // Hmap
 t_hmap		ft_hmap_new(size_t *init_cap);
 void		ft_hmap_free(t_hmap *map, void (*del)(void *));
+
+typedef char *	(*t_concat_entry) (char *, void *);
+char		**ft_hmap_to_array(t_hmap *hmap, t_concat_entry f);
 
 int16_t		ft_hmap_set(t_hmap *map, const char *key, void *value, \
 			void (*del)(void *));
