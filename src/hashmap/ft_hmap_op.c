@@ -6,7 +6,7 @@
 /*   By: sliziard <sliziard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 12:53:50 by sliziard          #+#    #+#             */
-/*   Updated: 2025/04/11 14:03:04 by sliziard         ###   ########.fr       */
+/*   Updated: 2025/04/21 14:20:44 by sliziard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ int16_t	ft_hmap_rm(t_hmap *map, const char *key, void (*del)(void *))
 		return (1);
 	del(map->__entries[idx].val);
 	map->__entries[idx].val = NULL;
+	map->count--;
 	return (0);
 }
